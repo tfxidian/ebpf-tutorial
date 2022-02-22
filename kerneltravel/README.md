@@ -1,0 +1,4 @@
+# ebpf tutorial
+ 
+该bcc程序主要包括两个部分，一部分是python语言，一部分是c语言。python部分主要做的工作是BPF程序的加载和操作BPF程序的map，
+并进行数据处理。c部分会被llvm编译器编译为BPF字节码，经过BPF验证器验证安全后，加载到内核中执行
