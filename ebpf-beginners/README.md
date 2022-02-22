@@ -20,3 +20,26 @@ ID 0: 1
 ID 0: 1
 ```
 这里我直接用`python3`是不行的，用`python ./ebpf.py`或者`./ebpf.py`是可以的。
+
+然后测试hello.py这里我也是直接用原程序，不过是手打的：
+
+```
+#!/usr/bin/python
+from bcc import BPF
+
+prog = """
+int helloworld(void *ctx){
+    bpf_trace_printk("Hello world\\n");
+    return 0;
+    }
+"""
+
+b = BPF(text=prog)
+clone = b.get_syscall_fnname("clone")
+b.attach_kprobe(event=clone, fn_name="helloworld")
+
+b.trace_print()
+
+```
+
+需要注意一下 ` bpf_trace_printk("Hello world\\n");` 这里的结尾是`\\n`而不是`\n`
