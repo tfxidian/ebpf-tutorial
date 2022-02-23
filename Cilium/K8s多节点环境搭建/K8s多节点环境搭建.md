@@ -1,4 +1,4 @@
-注： 本文章严重参考链接文章，但单独使用两者的时候都遇到了不少问题，这里结合两者进行整理输出。
+﻿注： 本文章严重参考链接文章，但单独使用两者的时候都遇到了不少问题，这里结合两者进行整理输出。
 
 基础环境：Ubuntu18.04 cpu:2 内存：2g
 
@@ -136,6 +136,11 @@ pods信息
 
 ![image.png](assets/image-20220223113832-ukkz9gd.png)
 
+
+## 遇到的问题
+突然master里面无法看到node了，搜了一下解决方法，不知道是不是最好的，不过还可以用：
+先执行 kubeadm reset 命令，再执行kubeadm join的那条命令即可。注意是在node节点机器上执行这个命令，不是在master机器上。
+
 ## 参考链接
 
 [基于ubuntu虚拟机的k8s环境搭建（双节点，master+node）](https://segmentfault.com/a/1190000021561713)
@@ -143,3 +148,4 @@ pods信息
 [K8S的安装(Ubuntu 20.04)](https://www.jianshu.com/p/520d6414a4ab)
 
 [学习kubernetes，从快速搭建k8s集群开始](https://blog.csdn.net/qq_34330286/article/details/118004838?spm=1001.2014.3001.5502)
+[k8s集群加入node成功，但在master不显示问题的解决](https://blog.csdn.net/u010420283/article/details/103661281)
