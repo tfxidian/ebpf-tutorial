@@ -17,18 +17,5 @@ Error: INSTALLATION FAILED: failed to download "cilium/cilium" at version "1.9.1
 ```
 
 接着我试着把版本号去掉，就成功了
-```
-root@ubuntu-master:/home/master/linux-amd64# helm install cilium cilium/cilium  --namespace kube-system
-NAME: cilium
-LAST DEPLOYED: Wed Feb 23 06:35:54 2022
-NAMESPACE: kube-system
-STATUS: deployed
-REVISION: 1
-TEST SUITE: None
-NOTES:
-You have successfully installed Cilium with Hubble.
+![image.png](Ciliuminstalled.PNG)
 
-Your release version is 1.11.1.
-
-For any further help, visit https://docs.cilium.io/en/v1.11/gettinghelp
-```
