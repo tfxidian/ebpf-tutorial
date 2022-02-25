@@ -125,7 +125,22 @@ TEST SUITE: None
 很遗憾，折腾了这么久还是不成功!!!
 先放弃了，做点其他事情。
 
+试了很多次都有问题，我昨天在腾讯云上买了3年200元的服务器，2g 2核还是非常便宜的，然后今天看了一下，可以直接部署K3s，就尝试部署了一下，非常方便，
+然后按照官方文档部署了一下Cilium，竟然可以了。
+```
+[lighthouse@VM-16-9-centos ~]$ kubectl get pods -n kube-system
+NAME                                      READY   STATUS    RESTARTS   AGE
+cilium-operator-578c9558b-k9p65           1/1     Running   0          4h57m
+metrics-server-86cbb8457f-kqb2m           1/1     Running   0          4h48m
+local-path-provisioner-5ff76fc89d-lw2z8   1/1     Running   0          4h48m
+svclb-traefik-v5v6n                       2/2     Running   0          4h47m
+traefik-6f9cbd9bd4-xwq6j                  1/1     Running   0          4h47m
+cilium-rdr2x                              1/1     Running   0          4h57m
+coredns-854c77959c-p5299                  1/1     Running   0          18s
+
+```
 
 
 ## 参考链接
 [虚拟网络之Kubernetes Cilium CNI 快速部署实操](https://blog.csdn.net/LL845876425/article/details/110410377)
+[Getting Started Using K3s](https://docs.cilium.io/en/v1.9/gettingstarted/k3s/)
