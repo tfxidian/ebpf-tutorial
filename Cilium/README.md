@@ -6,3 +6,11 @@ this is  a Cilium learning tutorial， maybe I should set up a brand new repo, bu
 `sudo mount bpffs -t bpf /sys/fs/bpf`
 安装Cilium
 `kubectl create -f https://raw.githubusercontent.com/cilium/cilium/1.7.2/install/kubernetes/quick-install.yaml`
+
+## 必读文章
+[Cilium简介](https://rexrock.github.io/post/cilium1/)
+
+
+
+
+
